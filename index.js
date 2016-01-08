@@ -1,0 +1,53 @@
+var size = require('element-size')
+
+var scratch = new Float32Array(2)
+
+module.exports = landscapeFit
+
+function landscapeFit (element, parent) {
+  var isSVG = element.nodeName.toUpperCase() === 'SVG'
+
+  resize.parent = parent
+
+  function resize () {
+    var target = parent || element.parentNode
+    var width = window.innerWidth
+    var height = window.innerHeight
+    var dims = scratch
+
+    if (typeof target === 'function') {
+      dims = target(dims) || dims
+    } else
+    if (target && target !== document.body) {
+      dims = size(target)
+    } else {
+      dims[0] = width
+      dims[1] = height
+    }
+
+    dims[0] = dims[0] | 0
+    dims[1] = dims[1] | 0
+
+    if (height > width) {
+      element.style.transform = 'rotate(90deg)'
+      element.style.transformOrigin = '50% 50%'
+    } else {
+      element.style.transform = null
+    }
+
+    if (isSVG) {
+      element.setAttribute('width', width * resize.scale + 'px')
+      element.setAttribute('height', height * resize.scale + 'px')
+    } else {
+      element.width = width * resize.scale
+      element.height = height * resize.scale
+    }
+
+    element.style.width = dims[0] + 'px'
+    element.style.height = dims[1] + 'px'
+
+    return resize
+  }
+
+  return resize()
+}

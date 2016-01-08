@@ -1,0 +1,37 @@
+{
+  "name": "landscape-fit",
+  "version": "1.0.0",
+  "description": "Fit an element to specific dimensions, rotated according to the aspect ratio to maintain a fake \"orientation lock\"",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Hugh Kennedy",
+    "email": "hughskennedy@gmail.com",
+    "url": "https://github.com/hughsk"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "landscape,",
+    "fit,",
+    "canvas,",
+    "svg,",
+    "element,",
+    "orientation,",
+    "lock,",
+    "dimensions,",
+    "aspect,",
+    "ratio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jam3/landscape-fit.git"
+  },
+  "homepage": "https://github.com/jam3/landscape-fit",
+  "bugs": {
+    "url": "https://github.com/jam3/landscape-fit/issues"
+  }
+}
