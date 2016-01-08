@@ -19,22 +19,22 @@ Creates a `resize` function for your `element`. Calling this function will resiz
 Here's a simple example to make your canvas update its dimensions when resizing the window:
 
 ``` javascript
-var fit = require('canvas-fit')
-var canvas = document.createElement('canvas')
+var fit = require('landscape-fit')
+var element = document.createElement('div')
 
-window.addEventListener('resize', fit(canvas), false)
+window.addEventListener('resize', fit(element), false)
 ```
 
 You might want to override the `parent` element that the canvas should be fitting within: in which case, pass that element in as your second argument:
 
 ``` javascript
-window.addEventListener('resize', fit(canvas, window), false)
+window.addEventListener('resize', fit(element, window), false)
 ```
 
 You can also pass your own dimensions via a callback like so:
 
 ``` javascript
-window.addEventListener('resize', fit(canvas, function (dims) {
+window.addEventListener('resize', fit(element, function (dims) {
   dims[0] = 100
   dims[1] = 200
 }), false)
