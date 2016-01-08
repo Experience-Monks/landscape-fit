@@ -16,6 +16,7 @@ text.style.transform = 'translate(-50%, -50%)'
 child.style.background = '#f0f'
 text.innerHTML = 'hello world'
 text.style.color = '#fff'
+text.style.textAlign = 'center'
 text.style.fontFamily = '"Helvetica Neue", sans-serif'
 text.style.fontWeight = 800
 text.style.fontSize = '3rem'

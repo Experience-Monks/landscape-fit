@@ -6,7 +6,7 @@ Fit an element to specific dimensions, rotated according to the aspect ratio to 
 
 Similar to [canvas-fit](https://github.com/hughsk/canvas-fit), but doesn't handle canvas scaling for HiDPI displays.
 
-![](http://i.imgur.com/Fv73tSZ.gif)
+![](http://i.imgur.com/SZZ5SN0.gif)
 
 ## Usage
 
