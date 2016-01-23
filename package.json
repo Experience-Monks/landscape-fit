@@ -1,6 +1,6 @@
 {
   "name": "landscape-fit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Fit an element to specific dimensions, rotated according to the aspect ratio to maintain a fake \"orientation lock\"",
   "main": "index.js",
   "license": "MIT",
