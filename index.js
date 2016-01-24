@@ -29,7 +29,7 @@ function landscapeFit (element, parent) {
     dims[1] = dims[1] | 0
 
     if (height > width) {
-      var transform = 'rotate(90deg) translate(0, -' + dims[1] + 'px)'
+      var transform = 'rotate(90deg) translate(0, -' + dims[0] + 'px)'
       var tmp = dims[0]
       dims[0] = dims[1]
       dims[1] = tmp
